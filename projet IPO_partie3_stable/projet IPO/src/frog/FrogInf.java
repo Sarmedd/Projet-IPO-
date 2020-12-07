@@ -14,17 +14,12 @@ public class FrogInf implements IFrog {
     private Element element;
     private Direction direction;
     private int distance_parcourue;   // distance parcourue par la grenouille
-    private int old_dist;             // ancienne valeur de distance_parcourue  (comme on modifie
-                                        // distance_parcourue dans move(), lorqu'on veut
-                                        // récupérer sa valeur, on obtient la valeur suivante, d'où
-                                        // l'intêret de conserver l'ancienne valeur)
 
     public FrogInf(Game g, int pos_x) {
         this.game = g;
         this.element = new Element(pos_x,0, Color.green);
         this.direction = Direction.nulldir;
         this.distance_parcourue = 0;
-        this.old_dist = 0;
     }
 
     @Override
