@@ -82,7 +82,7 @@ public class FroggerGraphic extends JPanel implements IFroggerGraphics, KeyListe
 
 	public void setTime(int time){
 		if (!isTimeSet) {
-			this.time = (double)(Math.round(time*100/1000));
+			this.time = (double)(Math.round((time*0.1)*100))/100;
 			isTimeSet = true;
 		}
 	}

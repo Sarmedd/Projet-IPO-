@@ -49,10 +49,7 @@ public class FrogInf implements IFrog {
             this.old_dist = this.distance_parcourue;
             this.distance_parcourue++;
         }
-        else if (key == Direction.down && this.distance_parcourue != 0) {
-            this.distance_parcourue--;
-            this.old_dist = this.distance_parcourue;
-        }
+
 
         Element res = new Element(new_abs, this.element.ord, Color.green);
         this.element = res;
@@ -60,9 +57,6 @@ public class FrogInf implements IFrog {
 
     @Override
     public int getDist(int param) {
-        if (param == 1)
-            return this.old_dist;
-        else
             return this.distance_parcourue;
     }
 
