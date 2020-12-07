@@ -13,7 +13,7 @@ public class FrogInf implements IFrog {
     private Game game;
     private Element element;
     private Direction direction;
-    private int distance_parcourue;   // distance parcourue par la grenouille
+    private int distance_parcourue; // distance parcourue par la grenouille
 
     public FrogInf(Game g, int pos_x) {
         this.game = g;
@@ -46,12 +46,11 @@ public class FrogInf implements IFrog {
         else if (key == Direction.up) {
             this.distance_parcourue++;
         }
-        else if (key == Direction.down && this.distance_parcourue != 0) {
-            this.distance_parcourue--;
-        }
 
         Element res = new Element(new_abs, this.element.ord, Color.green);
         this.element = res;
+
+
     }
 
     @Override
